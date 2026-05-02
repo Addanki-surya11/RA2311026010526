@@ -1,0 +1,20 @@
+# Environment files — contain secrets, never commit these
+.env
+.env.local
+.env*.local
+
+# Node modules — install with npm install
+node_modules/
+
+# Log files — generated at runtime
+*.log
+
+# Next.js build output
+notification_app_fe/.next/
+notification_app_fe/.next
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,12 @@
+{
+  "name": "logging-middleware",
+  "version": "1.0.0",
+  "description": "Custom logging middleware for AFFORDMED Campus Notifications — no console.log allowed",
+  "main": "logger.js",
+  "scripts": {
+    "test": "node -e \"const l = require('./logger'); l.info('Logger test', { status: 'ok' });\""
+  },
+  "keywords": ["logging", "middleware", "affordmed"],
+  "author": "Surya Addanki",
+  "license": "ISC"
+}
