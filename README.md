@@ -36,15 +36,6 @@ RA2311026010526/
 - **Custom Logger** — structured `[TIMESTAMP] [LEVEL] message | meta` format, writes to both stdout and a log file
 - **Expandable Cards** — click any notification to see full details, ID, and priority score
 - **Read / Unread tracking** — in-memory, persists across tab navigation
-
----
-
-## Setup & Running
-
-### Prerequisites
-- Node.js ≥ 18
-- npm
-
 ---
 
 ### 1 · Logging Middleware
