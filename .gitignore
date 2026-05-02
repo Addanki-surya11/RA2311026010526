@@ -6,8 +6,10 @@
 # Node modules — install with npm install
 node_modules/
 
-# Log files — generated at runtime
+# Log files — generated at runtime (sample logs are committed as exceptions below)
 *.log
+!notification_app_fe/app.log
+!notification_app_be/notifications.log
 
 # Next.js build output
 notification_app_fe/.next/
