@@ -72,19 +72,6 @@ NOTIFY_TOKEN=your_token node priorityInbox.js
 $env:NOTIFY_TOKEN="your_token"; node priorityInbox.js
 ```
 
-**Sample output:**
-```
-========================================================================================
-  TOP 10 PRIORITY NOTIFICATIONS
-========================================================================================
-  Rank  | Type      | Priority | Timestamp           | Message
-----------------------------------------------------------------------------------------
-  #01   | Placement | 399.00   | 2026-04-22 17:51:18 | Campus placement drive for TCS...
-  #02   | Result    | 299.12   | 2026-04-22 17:51:30 | Semester results published...
-```
-
----
-
 ### 3 · Frontend — Notification Dashboard
 
 ```bash
@@ -100,27 +87,6 @@ npm run dev
 ```
 
 Open **http://localhost:3000**
-
----
-
-## Environment Variables
-
-Copy `.env.example` to `.env.local` in each folder and fill in:
-
-```env
-EMAIL=your_university_email@example.edu
-NAME=Your Full Name
-ROLL_NO=RA0000000000000
-ACCESS_CODE=your_access_code
-
-CLIENT_ID=your_client_id
-CLIENT_SECRET=your_client_secret
-
-# Used as Bearer token for the notification API
-NOTIFY_TOKEN=your_client_secret
-```
-
-> **Note:** `.env.local` is git-ignored and will never be committed.
 
 ---
 
@@ -140,17 +106,3 @@ normalised_recency = ((epoch - min_epoch) / (max_epoch - min_epoch)) * 99
 This ensures type is always the primary sort key, with recency as a secondary tiebreaker within the same type band. See `notification_system_design.md` for full design documentation.
 
 ---
-
-## Logging Format
-
-All logs follow a structured format — no `console.log` is used anywhere:
-
-```
-[2026-05-02T06:30:01.123Z] [INFO]  Proxying notification request | {"url":"...","limit":"100"}
-[2026-05-02T06:30:01.891Z] [INFO]  Notifications proxied successfully | {"count":25,"status":200}
-[2026-05-02T06:30:02.012Z] [ERROR] Upstream API error | {"status":401,"body":"..."}
-```
-
-Sample logs are available in:
-- `notification_app_fe/app.log`
-- `notification_app_be/notifications.log`
