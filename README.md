@@ -96,4 +96,4 @@ normalised_recency = ((epoch - min_epoch) / (max_epoch - min_epoch)) * 99
 
 This ensures type is always the primary sort key, with recency as a secondary tiebreaker within the same type band. See `notification_system_design.md` for full design documentation.
 
----
+--
